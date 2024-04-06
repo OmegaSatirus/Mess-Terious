@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <header id="HeaderPagina">
+        <nav id="NavHeader" class="AlinhadoCen">
+            <div class="Pedaco">
+                <ul id="UlNav" class="FlexH AlinhadoArd">
+                    <li class="FakeButton"><a href="IMC.html">Calular IMC</a></li>
+                    <li class="FakeButton"><a href="Sudoku.html">Sudoku</a></li>
+                    <li class="FakeButton"><a href="Random.html">Geradores Randomicos</a></li>
+                    <li class="FakeButton"><a href="Palavra.html">A Palavra de Hoje é:</a></li>
+                    <li class="FakeButton"><a href="Bitcoin.html">O que é Bitcoin</a></li>
+                </ul>
+            </div>
+            <div class="Pedaco">
+                <a id="ClickLogin" href="#">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main id="CorpoPagina" class="FlexV AlinhadoCen">
+        <section id="ParagrafoInfo" class="MainSection AlinadoCen FlexH Tr-Principal ">
+            <article class="FlexV AlinadoEsq">
+                <h3><b>O QUE É IMC?</b></h3>
+                <p>O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está dentro de uma faixa de peso saudável em relação à sua altura. Ele é obtido dividindo o peso da pessoa em quilogramas pela altura ao quadrado em metros. O resultado do IMC fornece uma estimativa da quantidade de gordura corporal e ajuda a identificar possíveis riscos à saúde relacionados ao peso, como obesidade ou baixo peso. No entanto, é importante ressaltar que o IMC é apenas uma ferramenta inicial de avaliação e não leva em consideração outros fatores importantes, como composição corporal e distribuição de gordura. Sempre é recomendado consultar um profissional de saúde para uma avaliação mais completa.</p>
+            </article>
+        </section>
+        <section id="CalculadoraIMC" class="MainSection AlinadoCen FlexH Tr-Principal">
+            <form id="IMCForm">
+                <label for="altura">Altura (m):</label>
+                <input type="number" step="0.01" id="altura" min="0.20" name="altura" required><br><br>
+                <label for="peso">Peso (kg):</label>
+                <input type="number" step="0.01" id="peso" min="1" name="peso" required><br><br>
+                <button type="button" onclick="calcularIMC()">Calcular IMC</button><br><br>
+                <div id="resultadoIMC"></div>
+            </form>
+        </section>
+    </main>
+    <footer id="MainFooter" class="AlinhadoCen ColadoBottom">
+        <h5>OUÇA FEBEM! | JC.TWS </h5>
+    </footer>
+
+    <script>
+        function calcularIMC() {
+            var altura = parseFloat(document.getElementById('altura').value);
+            var peso = parseFloat(document.getElementById('peso').value);
+
+            if (altura > 0 && peso > 0) {
+                var imc = peso / (altura * altura);
+                var resultado = "Seu IMC é " + imc.toFixed(2) + ". ";
+
+                if (imc < 18.5) {
+                    resultado += "Isso indica que você está abaixo do peso.";
+                } else if (imc >= 18.5 && imc < 25) {
+                    resultado += "Isso indica que você está dentro do peso normal.";
+                } else if (imc >= 25 && imc < 30) {
+                    resultado += "Isso indica que você está acima do peso.";
+                } else {
+                    resultado += "Isso indica que você está obeso.";
+                }
+
+                document.getElementById('resultadoIMC').innerHTML = resultado;
+            } else {
+                alert("Por favor, insira valores válidos para altura e peso.");
+            }
+        }
+    </script>
+</body>
+</html>

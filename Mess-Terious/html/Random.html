@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Geradores Randomicos</title>
+    <script src="../js/geradores.js"></script> <!-- Adicionando o link para o arquivo JavaScript externo -->
+</head>
+
+<body>
+    <header id="HeaderPagina">
+        <nav id="NavHeader" class="AlinhadoCen">
+            <div class="Pedaco">
+                <ul id="UlNav" class="FlexH AlinhadoArd">
+                    <li class="FakeButton"><a href="IMC.html">Calular IMC</a></li>
+                    <li class="FakeButton"><a href="Sudoku.html">Sudoku</a></li>
+                    <li class="FakeButton"><a href="Random.html">Geradores Randomicos</a></li>
+                    <li class="FakeButton"><a href="Palavra.html">A Palavra de Hoje é:</a></li>
+                    <li class="FakeButton"><a href="Bitcoin.html">O que é Bitcoin</a></li>
+                </ul>
+            </div>
+            <div class="Pedaco">
+                <a id="ClickLogin" href="#">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main id="CorpoPagina" class="FlexV AlinhadoCen">
+        <section class="MainSection AlinadoCen FlexV">
+            <div class="AlinadoCen FlexH">
+                <button onclick="gerarNome()">Gerar Nome</button>
+                <div id="nomeOutput"></div>
+            </div>
+            <div class="AlinadoCen FlexH">
+                <button onclick="gerarSobrenome()">Gerar Sobrenome</button>
+                <div id="sobrenomeOutput"></div>
+            </div>
+            <div class="AlinadoCen FlexH">
+                <button onclick="gerarCor()">Gerar Cor</button>
+                <div id="corOutput" style="width: 100px; height: 100px;"></div>
+                <div id="corOutput"></div>
+            </div>
+            <div class="AlinadoCen FlexH">
+                <button onclick="gerarNumero()">Gerar Número</button>
+                <div id="numeroOutput"></div>
+            </div>
+            <div class="AlinadoCen FlexH">
+                <button onclick="gerarPalavra()">Gerar Palavra</button>
+                <div id="palavraOutput"></div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
