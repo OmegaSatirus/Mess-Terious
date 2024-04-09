@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -17,15 +16,110 @@
 body {
     width: 100vw;
     height: auto;
+    color: var(--BrancoFosco);
+    background-size: 400% 400%;
+    background-image: linear-gradient(-45deg, var(--AzulEscuro), var(--AzulClaro), var(--CinzaClaro),var(--CinzaEscuro));
+        animation: mygradient 40s ease infinite;
+    background-color: var(--CinzaEscuro);
 }
 
 /* Formatação header */
 
 #HeaderPagina {
     position: fixed;
+    top: 0; 
     height: 5vh;
     width: 100vw;
-    border: 1px red solid;
+    background-color: var(--AzulEscuro);
+    display: flex;
+}
+.Pedaco{
+    width: 65vw;
+    height: 5vh;
+}
+
+#UlNav{
+    top: vh;
+    list-style: none;
+}
+
+.Pedaco:nth-child(2){
+width: 20vw;
+padding: 1.5vh;
+margin-left: 15vw;
+}
+
+#ClickLogin {
+    margin-top:.3vh;
+    border: 2px solid  var(--CinzaEscuro);
+    background-color: var(--CinzaClaro);
+    padding: 1vh 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+    width: 20vw;
+    margin-top: .5vh;
+    margin-right: 13.7vw;
+}
+
+#Gambiarra{
+    text-decoration: none;
+    list-style: none;
+}
+
+#ClickLogin:hover{
+    margin-top:.3vh;
+    color:var(--CinzaEscuro);
+    border: 2px solid  var(--CinzaClaro);
+    background-color: var(--CinzaEscuro);
+    padding: 1vh 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+    color:white;
+
+}
+
+.FakeButton{
+    margin-top:.3vh;
+    border: 2px solid  var(--CinzaEscuro);
+    background-color: var(--CinzaClaro);
+    padding: 1vh 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+}
+
+.FakeButton:hover{
+    margin-top:.3vh;
+    color:white;
+    border: 2px solid  var(--CinzaClaro);
+    background-color: var(--CinzaEscuro);
+    padding: 1vh 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.FakeButton-Info{
+    margin: 2vw;
+    border: 2px solid  var(--CinzaEscuro);
+    background-color: var(--CinzaClaro);
+    padding: 1vh 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+}
+
+.FakeButton-Info:hover{
+    color:white;
+    border: 2px solid  var(--CinzaClaro);
+    background-color: var(--CinzaEscuro);
+    padding: 1vh 1vw;
+    border-radius: 16px;
+    cursor: pointer;
+}
+* a{
+    color: var(--BrancoFosco);
+    text-decoration: none;
 }
 
 
@@ -43,49 +137,71 @@ body {
     padding: 2.5vw 2.5vh;
 }
 
+.MainSection article .InfoInicial{
+    font-size: 24pt;
+}
+
+
 /* footer  */
 
 #MainFooter{
-
+    position: fixed;
+    bottom: .5vh;
+    text-align: center;
+    width: 100%;
 }
 
 /* Alinhamento */
 
 .AlinhadoBtw {
     justify-content: space-between;
+    display: flex;
     align-items: center;
 }
 
 .AlinhadoArd {
     justify-content: space-around;
+    display: flex;
     align-items: center;
 }
 
 .AlinhadoCen {
     justify-content: center;
     align-items: center;
+    display: flex;
     text-align: center;
 }
 
 .AlinhadoDir {
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items:end;
+    display: flex;
     text-align: right;
 }
 
 .AlinhadoEsq {
     justify-content: center;
     align-items: center;
+    display: flex;
     text-align: left;
 }
 
-.ColadoBottom{
-    align-items: end;
+#Center{
+    margin: auto;
+    width: 100%;
+    height: 80vh;
+}
+.SmallButton{
+    width: 30%;
+    margin: auto;
+    font-size: 12pt;
+    font-weight: bolder;
 }
 
 .FlexH {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .FlexV {
@@ -100,6 +216,11 @@ body {
     flex-direction: row;
 }
 
+.Tr-Secundaria {
+    display: flex;
+    flex-direction: column;
+}
+
 .Td-Principal {
     border: black solid 1px;
     height: 23vh;
@@ -107,6 +228,7 @@ body {
     padding: .5vh .5vw;
     border-radius: 16px;
     display: flex;
+    color: black;
     flex-wrap: wrap;
     flex-direction: column;
     margin: .8vh .8vw;
@@ -114,11 +236,29 @@ body {
     transition: all 1s ease-in-out;
 }
 
+.Td-Secundaria {
+    border: black solid 1px;
+    height: 15vh;
+    width: 17vw;
+    padding: .5vh .5vw;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: .8vh .8vw;
+    background-color: aliceblue;
+    transition: all 1s ease-in-out;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
 /* formatação geral  */
 
 #ParagrafoInfo{
     width: 40vw;
 }
+
 
 
 /* Formatação sudoku */
@@ -138,4 +278,63 @@ body {
 }
 #sudoku input.error {
     background-color: red;
+}
+
+#TabSudoku button{
+    margin-left: 1vw;
+    height:  39.5vh;
+    margin-top: -.1vh;
+    border-radius: 0 16px 16px 0;    
+}
+/* Pagina IMC */
+
+.InptImc[type="number"]{
+    border: 2px solid var(--CinzaClaro);
+    border-radius: 16px;
+    background-color: var(--AzulEscuro);
+    text-align: center;
+    font-size: 16pt;
+    width: 50vw;
+}
+
+#resultadoIMC {
+    width: 50vw;
+    background-color: var(--CinzaClaro);
+    border: 2px solid var(--CinzaEscuro);
+    padding: 10px;
+    border-radius: 16px;
+    font-weight: bolder;
+    font-size: 15pt;
+}
+
+/* pagina nome */
+
+#titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 65pt;
+}
+
+#significado{
+    font-size: 50pt;
+}
+/* fundo animado */
+@keyframes mygradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.Aumeto{
+    height: 20vh;
+    width: 20vw;
+}
+
+*{
+    overflow: hidden;
 }
