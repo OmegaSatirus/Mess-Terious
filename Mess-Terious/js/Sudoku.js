@@ -1,19 +1,18 @@
 function generateRandomBoard() {
     const sudoku = [];
-    const emptyCells = 40; // Defina o número de células vazias
+    const emptyCells = 40; 
 
-    // Preencher o tabuleiro com zeros
     for (let i = 0; i < 9; i++) {
         sudoku.push([0, 0, 0, 0, 0, 0, 0, 0, 0]);
     }
 
-    // Preencher o tabuleiro com números aleatórios válidos
+
     for (let i = 0; i < emptyCells; i++) {
         let row = Math.floor(Math.random() * 9);
         let col = Math.floor(Math.random() * 9);
         let num = Math.floor(Math.random() * 9) + 1;
 
-        // Verificar se o número é válido na posição atual
+
         while (!isValidMove(sudoku, row, col, num)) {
             row = Math.floor(Math.random() * 9);
             col = Math.floor(Math.random() * 9);
@@ -91,7 +90,6 @@ function checkSolution() {
         }
     }
 
-    // Verificar bloco 3x3
     const startRow = Math.floor(row / 3) * 3;
     const startCol = Math.floor(col / 3) * 3;
     for (let i = startRow; i < startRow + 3; i++) {
@@ -134,7 +132,7 @@ function solve() {
 function solveSudoku(sudoku) {
     const emptyCell = findEmptyCell(sudoku);
     if (!emptyCell) {
-        return true; // Sudoku resolvido
+        return true; 
     }
 
     const row = emptyCell[0];
@@ -148,11 +146,11 @@ function solveSudoku(sudoku) {
                 return true;
             }
 
-            sudoku[row][col] = 0; // Não encontrou solução, então voltar atrás
+            sudoku[row][col] = 0; 
         }
     }
 
-    return false; // Não encontrou solução
+    return false;
 }
 
 function findEmptyCell(sudoku) {

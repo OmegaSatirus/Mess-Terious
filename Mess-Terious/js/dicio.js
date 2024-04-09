@@ -36,20 +36,28 @@ var palavrasESignificados = [
     { palavra: "Yoga", significado: "Prática física, mental e espiritual originada na Índia antiga." },
     { palavra: "Zebra", significado: "Mamífero listrado da família dos equídeos, nativo da África." },
 ];
-
-// Função para obter uma palavra aleatória e seu significado
 function obterPalavraAleatoria() {
     var indice = Math.floor(Math.random() * palavrasESignificados.length);
     var palavraAleatoria = palavrasESignificados[indice];
     return palavraAleatoria;
 }
 
-// Função para ser chamada quando o botão for clicado
 function exibirPalavraESignificado() {
     var palavraESignificado = obterPalavraAleatoria();
-    document.getElementById("palavra").innerText = "Palavra: " + palavraESignificado.palavra;
-    document.getElementById("significado").innerText = "Significado: " + palavraESignificado.significado;
+    
+    var h2Palavra = document.createElement("h2");
+    h2Palavra.id = "titulo";
+    h2Palavra.textContent = palavraESignificado.palavra;
+
+    var pSignificado = document.createElement("p");
+    pSignificado.id = "significado"
+    pSignificado.textContent = palavraESignificado.significado;
+
+    var divPalavraSignificado = document.getElementById("palavraSignificado");
+    divPalavraSignificado.innerHTML = ""; 
+
+    divPalavraSignificado.appendChild(h2Palavra);
+    divPalavraSignificado.appendChild(pSignificado);
 }
 
-// Adiciona um event listener para o botão
-document.getElementById("btnPalavraAleatoria").addEventListener("click", exibirPalavraESignificado);
+exibirPalavraESignificado();
