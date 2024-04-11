@@ -509,6 +509,7 @@ padding:2vh;
     }
 
     #NavHeader {
+        display:none;
         margin-top: -3vh;
     }
 
