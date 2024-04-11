@@ -33,7 +33,7 @@ main {
 #HeaderPagina {
     position: fixed;
     top: 0;
-    height: 5vh;
+    height: 10vh;
     width: 100vw;
     background-color: var(--AzulEscuro);
     display: flex;
@@ -150,7 +150,7 @@ main {
 }
 
 .MainSection article .InfoInicial {
-    font-size: 24pt;
+    font-size: 20pt;
 }
 
 
@@ -282,7 +282,6 @@ main {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 1px;
-    border: 1px solid black;
 }
 
 #sudoku input {
@@ -292,14 +291,23 @@ main {
     text-align: center;
 }
 
+#sudoku .row:nth-child(6),
+#sudoku .row:nth-child(3) {
+    margin-right: 3px;
+}
+
+#sudoku .row input:nth-child(3),
+#sudoku .row input:nth-child(6) {
+    margin-bottom: 3px;
+}
+
 #sudoku input.error {
     background-color: red;
 }
 
 #TabSudoku button {
     margin-left: 1vw;
-    height: 39.5vh;
-    margin-top: -.1vh;
+    height: 40vh;
     border-radius: 0 16px 16px 0;
 }
 
@@ -312,7 +320,7 @@ main {
     background-color: var(--AzulEscuro);
     text-align: center;
     font-size: 16pt;
-    color:white;
+    color: white;
     width: 50vw;
 }
 
@@ -322,7 +330,7 @@ main {
     border: 2px solid var(--CinzaEscuro);
     padding: 10px;
     border-radius: 16px;
-    color:white;
+    color: white;
     font-weight: bolder;
     font-size: 15pt;
 }
@@ -381,8 +389,8 @@ main {
 }
 
 @media screen and (max-width:1000px) {
-    
-    #NavHeader{
+
+    #NavHeader {
         width: 100vw;
     }
 
@@ -427,14 +435,16 @@ main {
         align-items: center;
         color: black;
     }
+
     #sudoku {
         width: 70vw;
         height: 39.4vh;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         gap: 1px;
-        border: 1px solid black;
+
     }
+
     #sudoku input {
         width: 4.7vh;
         height: 4.7vh;
@@ -447,9 +457,22 @@ main {
         height: 5vh;
         width: 70.5vw;
         margin-top: 3vh;
-        border-radius: 0 0 16px 16px ;
+        border-radius: 0 0 16px 16px;
     }
 }
+
+@media screen and (max-width:1280px) {
+    .FakeButton-Info {
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FakeButton-Info article {
+        width: 75vw;
+    }
+}
+
 @media screen and (min-width:632px) and (max-width:1170px) {
     .Td-Secundaria {
         border: black solid 1px;
@@ -473,6 +496,84 @@ main {
         height: 5vh;
         width: 40.3vw;
         margin-top: -.1vh;
-        border-radius: 0 0 16px 16px ;
+        border-radius: 0 0 16px 16px;
+    }
+}
+
+@media screen and (max-width:414px) {
+
+    .Pedaco {
+        display: none !important;
+    }
+
+    #HeaderPagina {
+        height: 10vh;
+    }
+
+    #NavHeader {
+        margin-top: -3vh;
+    }
+
+    #CorpoPagina {
+        margin-top: 1vh;
+    }
+
+    .FakeButton-Info {
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FakeButton-Info article {
+        width: 75vw;
+    }
+
+    .FakeButton-Info article p {
+        font-size: 12pt !important;
+
+    }
+
+    #ParagrafoInfo {
+        width: 90vw;
+    }
+
+    #IMCButton {
+        width: 50vw;
+    }
+
+    #sudoku {
+        width: 100%;
+        height: 39.4vh;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 1px;
+
+    }
+
+    #sudoku input {
+        width: 4vh;
+        height: 4vh;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #TabSudoku {
+        width: 100%;
+    }
+
+    #TabSudoku button {
+        margin-left: 1vw;
+        height: 5vh;
+        width: 80.5vw;
+        margin-top: -2.7vh;
+        border-radius: 0 0 16px 16px;
+    }
+
+    #significado {
+        font-size: 30pt !important;
+    }
+
+    #HeaderPagina{
+        display: none;
     }
 }
