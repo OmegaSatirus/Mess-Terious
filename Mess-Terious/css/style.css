@@ -25,6 +25,7 @@ body {
 }
 
 main {
+    margin-top: 10vh;
     overflow-y: auto;
 }
 
@@ -133,7 +134,7 @@ main {
 /* Formtação main  */
 
 #CorpoPagina {
-    margin-top: 5vh;
+    margin-top: 10vh;
     width: 100vw;
     height: auto;
     padding: 2.5vw 2.5vh;
