@@ -13,6 +13,10 @@
     --CinzaEscuro: #454545;
 }
 
+span{
+color:red !important;
+}
+
 body {
     width: 100vw;
     height: auto;
