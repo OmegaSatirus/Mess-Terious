@@ -154,7 +154,7 @@ main {
     font-size: 20pt;
 }
 .MainSection article .InfoInicial:nth-child(1){
-font-size:15pt !important;
+padding:2vh;
 }
 
 /* footer  */
