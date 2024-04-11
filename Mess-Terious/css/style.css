@@ -507,9 +507,9 @@ padding:2vh;
     }
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:660px) {
     #HeaderPagina {
-        height: 10vh;
+       display:none;
     }
 
     #NavHeader {
