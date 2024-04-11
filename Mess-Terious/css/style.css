@@ -501,11 +501,6 @@ main {
 }
 
 @media screen and (max-width:414px) {
-
-    .Pedaco {
-        display: none !important;
-    }
-
     #HeaderPagina {
         height: 10vh;
     }
