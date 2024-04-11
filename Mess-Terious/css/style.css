@@ -461,7 +461,7 @@ main {
     }
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width:1200px) {
     .FakeButton-Info {
         width: 80vw;
         align-items: center;
@@ -515,7 +515,7 @@ main {
     }
 
     #CorpoPagina {
-        margin-top: 1vh;
+        margin-top: 10vh;
     }
 
     .FakeButton-Info {
@@ -573,7 +573,4 @@ main {
         font-size: 30pt !important;
     }
 
-    #HeaderPagina{
-        display: none;
-    }
 }
