@@ -18,40 +18,46 @@ body {
     height: auto;
     color: var(--BrancoFosco);
     background-size: 400% 400%;
-    background-image: linear-gradient(-45deg, var(--AzulEscuro), var(--AzulClaro), var(--CinzaClaro),var(--CinzaEscuro));
-        animation: mygradient 40s ease infinite;
+    background-image: linear-gradient(-45deg, var(--AzulEscuro), var(--AzulClaro), var(--CinzaClaro), var(--CinzaEscuro));
+    animation: mygradient 40s ease infinite;
     background-color: var(--CinzaEscuro);
+    overflow-x: hidden;
+}
+
+main {
+    overflow-y: auto;
 }
 
 /* Formatação header */
 
 #HeaderPagina {
     position: fixed;
-    top: 0; 
+    top: 0;
     height: 5vh;
     width: 100vw;
     background-color: var(--AzulEscuro);
     display: flex;
 }
-.Pedaco{
+
+.Pedaco {
     width: 65vw;
     height: 5vh;
 }
 
-#UlNav{
+#UlNav {
     top: vh;
     list-style: none;
 }
 
-.Pedaco:nth-child(2){
-width: 20vw;
-padding: 1.5vh;
-margin-left: 15vw;
+.Pedaco:nth-child(2) {
+    width: 20vw;
+    padding: 1.5vh;
+    margin-left: 15vw;
 }
 
 #ClickLogin {
-    margin-top:.3vh;
-    border: 2px solid  var(--CinzaEscuro);
+    margin-top: .3vh;
+    border: 2px solid var(--CinzaEscuro);
     background-color: var(--CinzaClaro);
     padding: 1vh 1vw;
     border-radius: 16px;
@@ -62,26 +68,26 @@ margin-left: 15vw;
     margin-right: 13.7vw;
 }
 
-#Gambiarra{
+#Gambiarra {
     text-decoration: none;
     list-style: none;
 }
 
-#ClickLogin:hover{
-    margin-top:.3vh;
-    color:var(--CinzaEscuro);
-    border: 2px solid  var(--CinzaClaro);
+#ClickLogin:hover {
+    margin-top: .3vh;
+    color: var(--CinzaEscuro);
+    border: 2px solid var(--CinzaClaro);
     background-color: var(--CinzaEscuro);
     padding: 1vh 1vw;
     border-radius: 16px;
     cursor: pointer;
-    color:white;
+    color: white;
 
 }
 
-.FakeButton{
-    margin-top:.3vh;
-    border: 2px solid  var(--CinzaEscuro);
+.FakeButton {
+    margin-top: .3vh;
+    border: 2px solid var(--CinzaEscuro);
     background-color: var(--CinzaClaro);
     padding: 1vh 1vw;
     border-radius: 16px;
@@ -89,19 +95,19 @@ margin-left: 15vw;
     transition: 1s all ease-in-out;
 }
 
-.FakeButton:hover{
-    margin-top:.3vh;
-    color:white;
-    border: 2px solid  var(--CinzaClaro);
+.FakeButton:hover {
+    margin-top: .3vh;
+    color: white;
+    border: 2px solid var(--CinzaClaro);
     background-color: var(--CinzaEscuro);
     padding: 1vh 1vw;
     border-radius: 16px;
     cursor: pointer;
 }
 
-.FakeButton-Info{
+.FakeButton-Info {
     margin: 2vw;
-    border: 2px solid  var(--CinzaEscuro);
+    border: 2px solid var(--CinzaEscuro);
     background-color: var(--CinzaClaro);
     padding: 1vh 1vw;
     border-radius: 16px;
@@ -109,15 +115,16 @@ margin-left: 15vw;
     transition: 1s all ease-in-out;
 }
 
-.FakeButton-Info:hover{
-    color:white;
-    border: 2px solid  var(--CinzaClaro);
+.FakeButton-Info:hover {
+    color: white;
+    border: 2px solid var(--CinzaClaro);
     background-color: var(--CinzaEscuro);
     padding: 1vh 1vw;
     border-radius: 16px;
     cursor: pointer;
 }
-* a{
+
+* a {
     color: var(--BrancoFosco);
     text-decoration: none;
 }
@@ -126,25 +133,30 @@ margin-left: 15vw;
 /* Formtação main  */
 
 #CorpoPagina {
+    margin-top: ;
     width: 100vw;
     height: auto;
     padding: 2.5vw 2.5vh;
-    margin: auto;
+    margin: 5vh auto auto auto;
 }
 
 .MainSection {
-    margin: 0;
+    margin: auto;
+    min-width: 60vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     padding: 2.5vw 2.5vh;
 }
 
-.MainSection article .InfoInicial{
+.MainSection article .InfoInicial {
     font-size: 24pt;
 }
 
 
 /* footer  */
 
-#MainFooter{
+#MainFooter {
     position: fixed;
     bottom: .5vh;
     text-align: center;
@@ -174,7 +186,7 @@ margin-left: 15vw;
 
 .AlinhadoDir {
     justify-content: right;
-    align-items:end;
+    align-items: end;
     display: flex;
     text-align: right;
 }
@@ -186,12 +198,13 @@ margin-left: 15vw;
     text-align: left;
 }
 
-#Center{
+#Center {
     margin: auto;
     width: 100%;
     height: 80vh;
 }
-.SmallButton{
+
+.SmallButton {
     width: 30%;
     margin: auto;
     font-size: 12pt;
@@ -255,8 +268,9 @@ margin-left: 15vw;
 
 /* formatação geral  */
 
-#ParagrafoInfo{
+#ParagrafoInfo {
     width: 40vw;
+    margin-top: 5vh;
 }
 
 
@@ -270,25 +284,29 @@ margin-left: 15vw;
     gap: 1px;
     border: 1px solid black;
 }
+
 #sudoku input {
     width: calc((40vw - 8px) / 9);
     height: calc((40vh - 8px) / 9);
     font-size: 1.5em;
     text-align: center;
 }
+
 #sudoku input.error {
     background-color: red;
 }
 
-#TabSudoku button{
+#TabSudoku button {
     margin-left: 1vw;
-    height:  39.5vh;
+    height: 39.5vh;
     margin-top: -.1vh;
-    border-radius: 0 16px 16px 0;    
+    border-radius: 0 16px 16px 0;
 }
+
 /* Pagina IMC */
 
-.InptImc[type="number"]{
+.InptImc[type="number"] {
+    color: var(--BrancoFosco);
     border: 2px solid var(--CinzaClaro);
     border-radius: 16px;
     background-color: var(--AzulEscuro);
@@ -311,32 +329,150 @@ margin-left: 15vw;
 
 /* pagina nome */
 
-#titulo{
+#titulo {
     font-family: 'Times New Roman', Times, serif;
     font-size: 65pt;
 }
 
-#significado{
+#significado {
     font-size: 50pt;
 }
+
 /* fundo animado */
 @keyframes mygradient {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-.Aumeto{
+.Aumeto {
     height: 20vh;
     width: 20vw;
 }
 
-*{
-    overflow: hidden;
+
+@media screen and (max-width:1169px) {
+    main {
+        overflow-X: visible;
+    }
+
+    .MainSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FakeButton-Info {
+        width: 60vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FakeButton-Info article {
+        width: 55vw;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    
+    #NavHeader{
+        width: 100vw;
+    }
+
+    .Pedaco {
+        margin-right: 4vw;
+        width: 80vw;
+        height: 5vh;
+    }
+
+    .Pedaco:nth-child(2) {
+        width: 10vw;
+        padding: 1.5vh;
+        margin-left: 0vw;
+    }
+}
+
+@media screen and (max-width:632px) {
+    .Pedaco {
+        display: none;
+    }
+
+    .Pedaco:nth-child(2) {
+        display: inline;
+        width: 10vw;
+        padding: 1.5vh;
+        margin-left: 0vw;
+    }
+
+    .Td-Secundaria {
+        border: black solid 1px;
+        height: 10vh;
+        width: 70vw;
+        padding: .5vh .5vw;
+        border-radius: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: .8vh .8vw;
+        background-color: aliceblue;
+        transition: all 1s ease-in-out;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+    #sudoku {
+        width: 70vw;
+        height: 39.4vh;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 1px;
+        border: 1px solid black;
+    }
+    #sudoku input {
+        width: 4.7vh;
+        height: 4.7vh;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #TabSudoku button {
+        margin-left: 1vw;
+        height: 5vh;
+        width: 70.5vw;
+        margin-top: 3vh;
+        border-radius: 0 0 16px 16px ;
+    }
+}
+@media screen and (min-width:632px) and (max-width:1170px) {
+    .Td-Secundaria {
+        border: black solid 1px;
+        height: 10vh;
+        width: 70vw;
+        padding: .5vh .5vw;
+        border-radius: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: .8vh .8vw;
+        background-color: aliceblue;
+        transition: all 1s ease-in-out;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+
+    #TabSudoku button {
+        margin-left: 1vw;
+        height: 5vh;
+        width: 40.3vw;
+        margin-top: -.1vh;
+        border-radius: 0 0 16px 16px ;
+    }
 }
