@@ -511,6 +511,9 @@ padding:2vh;
     #HeaderPagina {
        display:none;
     }
+    #CorpoPagina{
+    margin-top:.5vh !important;   
+    }
 
     #NavHeader {
         display:none;
